@@ -2,8 +2,7 @@ import discord
 from discord.utils import get
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix="!", pm_help=None,
-                   case_insensitive=False)
+bot = commands.Bot(command_prefix="!", pm_help=None, case_insensitive=False)
 
 @bot.event
 async def on_ready():
@@ -28,7 +27,6 @@ async def hello(ctx):
 async def on_message(message):
     if message.content.startswith('why'):
         await message.channel.send('Why not?')
-
 
     if message.content.startswith('Why is the bot named that?'):
         await message.channel.send('Because my creator had a chicken at a friends house, but they ate it. I am named for that chicken.')
